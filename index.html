@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Groupe Le Coq · Restaurants, bouillons, guinguettes, pub et bar dansant à Bordeaux</title>
+<meta name="description" content="Le Bal du Coq, Bouillon et Cotillons, Chez Bébert, Poupoule, Basta, la Guinguette du Coq, le Bistrot des Girondins et Madame Le Coq : un groupe indépendant bordelais depuis 2015. Réservez en ligne, par WhatsApp ou par e-mail.">
+<meta property="og:title" content="Groupe Le Coq · Dix ans de tables à la bordelaise">
+<meta property="og:description" content="Bouillons, guinguettes, bar dansant, pub et traiteur à Bordeaux, Mérignac, Bègles et Villenave-d'Ornon.">
+<meta property="og:image" content="assets/video/hero-poster.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/logos/lecoq-picto.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Familjen+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,800&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Groupe Le Coq","foundingDate":"2015","founder":{"@type":"Person","name":"Romain Cazalas"},"areaServed":"Bordeaux","sameAs":["https://www.instagram.com/groupelecoq/"]}</script>
+</head>
+<body>
+<a class="sr" href="#maisons">Aller aux maisons</a>
+<!-- INTRO : film d'ouverture -->
+<div class="intro" id="intro" role="dialog" aria-label="Film d'ouverture du Groupe Le Coq" hidden>
+  <video id="intro-video" muted playsinline preload="auto" poster="assets/video/intro-poster.jpg"></video>
+  <div class="intro-ui">
+    <button class="intro-skip" type="button" id="intro-skip">Passer l'intro →</button>
+    <div class="intro-bar"><span id="intro-prog"></span></div>
+  </div>
+</div>
+
+
+<header class="top" id="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Groupe Le Coq, accueil"><img src="assets/logos/lecoq-noir.png" alt="Groupe Le Coq"></a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="#maisons">Nos maisons</a>
+      <a href="cartes.html">Les cartes</a>
+      <a href="galerie.html">Galerie</a>
+      <a href="#soirees">Soirées</a>
+      <a href="#evenements">Événements</a>
+      <a href="#brigade">La brigade</a>
+      <a href="#recrutement">Recrutement</a>
+      <a href="#presse">Presse</a>
+    </nav>
+    <button class="btn sm resa-btn" type="button" data-resa="">Réserver</button>
+    <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <!-- HERO pop -->
+  <section class="hero-pop" aria-label="Présentation">
+    <div class="hp-sun" aria-hidden="true"></div>
+    <div class="hp-dots hp-dots-a" aria-hidden="true"></div>
+    <div class="hp-dots hp-dots-b" aria-hidden="true"></div>
+    <div class="wrap hp-grid">
+      <div class="hp-txt">
+        <p class="hp-pill">Groupe Le Coq · Bordeaux depuis 2015</p>
+        <h1 class="hp-h1"><span class="hp-on">On</span> <span class="hp-win"><span class="hp-roll" id="hp-roll"><span>mange.</span><span>trinque.</span><span>danse.</span><span>reçoit.</span><span>mange.</span></span></span></h1>
+        <p class="hp-tag">Dix ans de tables <em>à la bordelaise.</em></p>
+        <p class="hp-sub">Bouillons, guinguettes, bar dansant, pub, pizzas et traiteur : une dizaine de maisons à Bordeaux, Mérignac, Bègles et Villenave-d'Ornon.</p>
+        <div class="hp-ctas">
+          <button class="btn noir" type="button" data-resa="">Réserver une table</button>
+          <a class="btn contour-noir" href="cartes.html">Les cartes du moment</a>
+          <button class="btn-film" type="button" id="revoir-film"><span>▶</span> Le film du groupe</button>
+        </div>
+      </div>
+      <div class="hp-collage" aria-hidden="true">
+        <div class="hp-cut hp-c1"><img src="assets/img/bdg-assiette-automne-s.webp" alt=""></div>
+        <div class="hp-cut hp-c2"><img src="assets/img/bal-carnaval-2-s.webp" alt=""></div>
+        <div class="hp-cut hp-c3"><img src="assets/img/pou-vert-s.webp" alt=""></div>
+        <div class="hp-st hp-s1" style="background:#F5DC78"><img src="assets/logos/bal.png" alt=""></div>
+        <div class="hp-st hp-s2"><img src="assets/logos/bistrot-rond.png" alt=""></div>
+        <div class="hp-st hp-s3" style="background:#F6E3C6"><img src="assets/logos/guinguette.png" alt=""></div>
+        <div class="hp-st hp-s4"><b>PUB</b><small>01.11</small></div>
+      </div>
+    </div>
+    <div class="hp-band" aria-hidden="true"><div>Bouillons ✦ Guinguettes ✦ Pub ✦ Bar dansant ✦ Pizzas ✦ Jardins ✦ Traiteur ✦ Bouillons ✦ Guinguettes ✦ Pub ✦ Bar dansant ✦ Pizzas ✦ Jardins ✦ Traiteur ✦&nbsp;</div></div>
+  </section>
+
+  <div class="marquee" aria-label="Nos marques"><div class="track" id="marquee"></div></div>
+
+  <!-- OCTOBRE ROSE -->
+  <section class="sec octobre-rose" id="octobre-rose" hidden>
+    <div class="wrap or-grid">
+      <div class="or-txt">
+        <p class="or-pill">Octobre Rose · 2026</p>
+        <h2 id="or-titre"></h2>
+        <p id="or-texte"></p>
+        <p class="or-suite" id="or-suite"></p>
+        <div class="row"><a class="btn noir" id="or-insta" target="_blank" rel="noopener">Suivre sur Instagram</a><a class="btn contour-noir" id="or-lien" target="_blank" rel="noopener">Le dépistage, ça se réserve</a></div>
+      </div>
+      <div class="or-video"><video id="or-video" muted loop playsinline preload="none" aria-label="Teaser Octobre Rose du Groupe Le Coq"></video></div>
+    </div>
+    <div class="or-marquee" aria-hidden="true"><div>12 lieux · 1 cause · tout le monde en rose · 12 lieux · 1 cause · tout le monde en rose · 12 lieux · 1 cause · tout le monde en rose ·&nbsp;</div></div>
+  </section>
+
+  <!-- FONDATEUR / MANIFESTE -->
+  <section class="sec fondateur" id="fondateur">
+    <div class="wrap">
+      <div class="fd-grid">
+        <figure class="fd-portrait reveal">
+          <img src="assets/img/romain-pop-s.webp" srcset="assets/img/romain-pop-s.webp 640w, assets/img/romain-pop.webp 1200w" sizes="(max-width:820px) 90vw, 520px" alt="Portrait pop art de Romain Cazalas, fondateur du Groupe Le Coq" loading="lazy">
+          <figcaption class="fd-sticker"><b>Romain Cazalas</b><span>Fondateur</span></figcaption>
+        </figure>
+        <div class="fd-txt reveal">
+          <p class="hp-pill">Le fondateur</p>
+          <blockquote>« Je me dois d'accueillir mes clients de la même façon que j'accueille des amis <mark>à la maison.</mark> »</blockquote>
+          <p class="fd-bio">Sorti du lycée hôtelier de Talence, passé par Jean Ramet, la Tupina et le Manifesto, Romain Cazalas rachète en 2015 un petit bistrot rue Lecoq. Dix ans plus tard, avec Loreleï Cazalas, il a bâti un groupe qui préfère inventer un concept par quartier plutôt que dupliquer une enseigne.</p>
+          <a class="btn noir" href="#histoire">Notre histoire en vidéo</a>
+        </div>
+      </div>
+      <div class="fd-conv">
+        <div class="cv reveal" style="--c:#FFD400"><b>01</b><h3>Recevoir comme à la maison</h3><p>Des équipes stables, un responsable par lieu, des clients qu'on appelle par leur prénom.</p></div>
+        <div class="cv reveal" style="--c:#FF4FA3"><b>02</b><h3>Frais, bon et pas cher</h3><p>Œuf mayo, mijotés, smash burgers, pizzas à pâte reposée 48 h : du fait maison à des prix que tout le monde comprend.</p></div>
+        <div class="cv reveal" style="--c:#8FD3A6"><b>03</b><h3>La fête comme service</h3><p>Concerts, DJ, pétanque, piste de danse : la soirée prolonge le repas.</p></div>
+        <div class="cv reveal" style="--c:#2D2BE0;--t:#FFF5E6"><b>04</b><h3>Un lieu, une identité</h3><p>Pas d'enseigne dupliquée : chaque adresse invente son nom, son logo et son décor.</p></div>
+      </div>
+      <div class="fd-chiffres reveal">
+        <div><strong>2015</strong><span>Premier bistrot, rue Lecoq</span></div>
+        <div><strong>10</strong><span>Marques actives</span></div>
+        <div><strong>45</strong><span>Personnes dans la brigade</span></div>
+        <div><strong>4</strong><span>Communes de la métropole</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAISONS -->
+  <section class="sec" id="maisons" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">Nos maisons</p><h2>Chaque adresse a son caractère</h2></div>
+        <p>Choisissez votre moment : un déjeuner au jardin, un bouillon entre amis, un burger au pub ou une nuit sur la piste. Réservez en ligne, sur WhatsApp ou par e-mail.</p>
+      </div>
+      <div class="filtres" id="filtres" role="group" aria-label="Filtrer les maisons"></div>
+      <div class="maisons" id="liste-maisons"></div>
+    </div>
+  </section>
+
+  <!-- ENTRE NOS MAISONS -->
+  <section class="sec passerelles" id="entre-maisons">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">Entre nos maisons</p><h2>Une soirée, plusieurs adresses</h2></div>
+        <p>Nos maisons se parlent. On vous oriente de l'une à l'autre, on se renvoie les tables et les bons plans.</p>
+      </div>
+      <div class="ponts">
+        <article class="pont"><span class="num">01</span><h3>Dîner à l'étage, danser en bas</h3><p>Bouillon et Cotillons au premier, le Bal du Coq au rez-de-chaussée : on passe de la table à la piste sans remettre son manteau.</p><button class="btn sm" type="button" data-resa="cotillons">Réserver le dîner</button></article>
+        <article class="pont"><span class="num">02</span><h3>Complet ? On vous trouve une table</h3><p>Une maison affiche complet ce soir ? Envoyez votre demande : l'équipe vous propose une table dans une autre maison du groupe.</p><button class="btn sm" type="button" data-resa="">Faire une demande</button></article>
+        <article class="pont"><span class="num">03</span><h3>Un événement, plusieurs savoir-faire</h3><p>Le jardin des Girondins pour le lieu, Madame Le Coq pour le traiteur, le Bal pour finir la nuit : un seul interlocuteur pour tout organiser.</p><a class="btn sm" href="#evenements">Organiser mon événement</a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIENTÔT -->
+  <section class="sec bientot" id="bientot">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">Ça bouge chez Le Coq</p><h2>Les nouveautés de l'automne</h2></div>
+        <p>2026 : le groupe passe d'un réseau local à un groupe de marques, à Bordeaux et au-delà.</p>
+      </div>
+      <div class="duo">
+        <article class="nouv pub">
+          <div class="pub-vid"><video data-auto muted loop playsinline preload="none" poster="assets/video/basta-teaser-poster.jpg" aria-label="Teaser Basta devient un pub"><source src="assets/video/basta-teaser.webm" type="video/webm"><source src="assets/video/basta-teaser.mp4" type="video/mp4"></video></div>
+          <p class="label">Réouverture le 1er novembre 2026 · place de Courréjean</p>
+          <h3>Basta devient un pub</h3>
+          <p>Smash burgers, fish &amp; chips, chicken wings, loaded fries et pintes au comptoir. La place de Courréjean change de dynamique ; la pizza continue juste à côté, à La Casetta.</p>
+          <div class="row"><a class="btn blanc" href="cartes.html#basta">Voir la carte du pub</a><button class="btn contour-blanc" type="button" data-resa="basta">Réserver</button></div>
+        </article>
+        <div id="feature"></div>
+      </div>
+      <div class="projets">
+        <div><h4>Basta en franchise</h4><p>Une marque forte, un savoir-faire éprouvé, une identité reproductible.</p></div>
+        <div><h4>Le Bal du Coq Tour</h4><p>L'ambiance du Bal hors de ses murs, sous forme d'événement itinérant.</p></div>
+        <div><h4>Guinguettes éphémères</h4><p>Des guinguettes saisonnières sur le modèle de Galaswinda, lancée à Mérignac en 2025.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOIRÉES -->
+  <section class="sec" id="soirees">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">La Guinguette du Coq · soirées &amp; concerts</p><h2>Les rendez-vous de la Guinguette</h2></div>
+        <p>Soirées à thème toute l'année, concerts sur la terrasse l'été, barbecue les soirs de fin de semaine. Le programme de la semaine tombe sur Instagram.</p>
+      </div>
+      <div class="rdv" id="rdv"></div>
+      <div class="retro-head"><h3>Rétrospective</h3><p id="gdc-note"></p></div>
+      <div class="retro" id="retro-gdc"></div>
+      <div class="row" style="margin-top:24px"><button class="btn" type="button" data-resa="guinguette">Réserver à la Guinguette</button><a class="btn clair" href="https://www.instagram.com/laguinguetteducoq/" target="_blank" rel="noopener">Le programme sur Instagram</a></div>
+
+      <div class="bal-soirees">
+        <div class="sec-head" style="margin-bottom:28px">
+          <div><p class="label">Le Bal du Coq · la nuit</p><h2>Les soirées du Bal</h2></div>
+          <p>Classico, Sacrée Soirée, Megamix et soirées spéciales : chaque mois, une nouvelle raison de sortir les paillettes.</p>
+        </div>
+        <div class="formats" id="bal-formats"></div>
+        <div class="retro" id="retro-bal"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÉVÉNEMENTS BDG -->
+  <section class="sec events-bdg" id="evenements">
+    <div class="wrap">
+      <div class="ev-hero">
+        <div class="ev-txt">
+          <img class="lg" src="assets/logos/bdg.png" alt="Le Bistrot des Girondins">
+          <p class="label">Événements · groupes · séminaires</p>
+          <h2>Vos événements au Bistrot des Girondins</h2>
+          <p>Une chartreuse au cœur du domaine de Rocquevielle, ancien centre d'entraînement des Girondins, avec plus de 400 m² de jardin, pétanque et terrasse. Du déjeuner d'équipe à la soirée de 250 personnes l'été, on s'occupe de tout, avec le traiteur Madame Le Coq si besoin.</p>
+          <div class="ev-kpi"><div><strong>400 m²</strong><span>de jardin</span></div><div><strong>250</strong><span>places l'été à Galaswinda</span></div><div><strong>26 €</strong><span>la formule déjeuner</span></div></div>
+        </div>
+        <div class="ev-gal" id="ev-gal"></div>
+      </div>
+      <div class="ev-formats" id="ev-formats"></div>
+      <form class="devis" id="devis" novalidate>
+        <div class="devis-head"><h3>Demande de devis</h3><p>Réponse sous 48 h. Ligne événements : <b id="tel-ev"></b></p></div>
+        <div class="champ"><label for="d-type">Type d'événement</label><select id="d-type"><option>Séminaire</option><option>Déjeuner d'équipe</option><option>Soirée d'entreprise</option><option>Anniversaire</option><option>Mariage / fête de famille</option><option>Galaswinda privatisée</option><option>Autre</option></select></div>
+        <div class="champ"><label for="d-date">Date souhaitée</label><input id="d-date" type="date"></div>
+        <div class="champ"><label for="d-pers">Nombre d'invités</label><input id="d-pers" type="number" min="5" inputmode="numeric" placeholder="ex. 40"></div>
+        <div class="champ"><label for="d-nom">Nom / société</label><input id="d-nom" autocomplete="organization"></div>
+        <div class="champ"><label for="d-tel">Téléphone</label><input id="d-tel" type="tel" autocomplete="tel"></div>
+        <div class="champ"><label for="d-traiteur">Besoin du traiteur ?</label><select id="d-traiteur"><option>Restauration du Bistrot</option><option>Traiteur Madame Le Coq</option><option>À définir ensemble</option></select></div>
+        <div class="champ full"><label for="d-msg">Votre projet</label><textarea id="d-msg" placeholder="Horaires, budget par personne, ambiance souhaitée…"></textarea></div>
+        <div class="full row" style="margin-top:0"><button class="btn" type="button" data-devis="wa">Envoyer sur WhatsApp</button><button class="btn clair" type="button" data-devis="mail">Envoyer par e-mail</button></div>
+        <p class="full retour" id="d-retour" hidden></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- NOUVEAUTÉS + RÉSEAUX -->
+  <section class="sec" id="nouveautes">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">Nouveautés</p><h2>Les dernières nouvelles</h2></div>
+        <p>Nouvelles cartes, ouvertures, soirées : suivez la vie des maisons ici et sur nos réseaux.</p>
+      </div>
+      <div class="news" id="news"></div>
+      <div class="reseaux">
+        <div>
+          <p class="label" style="margin-bottom:14px">Sur Instagram</p>
+          <div id="insta"></div>
+        </div>
+        <div class="panel">
+          <h3>Suivez-nous</h3>
+          <ul class="comptes" id="comptes"></ul>
+          <div class="fb-wrap" id="fb"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRIGADE -->
+  <section class="sec brigade" id="brigade">
+    <div class="wrap">
+      <div class="brig">
+        <div class="brig-txt">
+          <p class="label">La brigade</p>
+          <h2>Une brigade de choc, d'une maison à l'autre</h2>
+          <p id="brig-texte"></p>
+          <div class="brig-kpi" id="brig-kpi"></div>
+          <div class="row"><a class="btn jaune" href="#recrutement">Rejoindre la brigade</a></div>
+        </div>
+        <div class="brig-gal" id="brig-gal"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTOIRE -->
+  <section class="sec" id="histoire" style="background:var(--papier)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">Notre histoire</p><h2>De la rue Lecoq à la franchise</h2></div>
+        <p>Sorti du lycée hôtelier de Talence, passé par Jean Ramet, la Tupina et le Manifesto, Romain Cazalas ouvre son premier bistrot en 2015. Avec Loreleï Cazalas, cofondatrice, il bâtit un groupe qui préfère inventer un concept par quartier.</p>
+      </div>
+      <div class="histoire">
+        <ol class="frise">
+          <li><span class="an">2015</span><div><h4>Bistrot Le Coq</h4><p>Rachat d'un petit bistrot rue Lecoq, près du stade Chaban-Delmas. La rue donne son nom au groupe.</p></div></li>
+          <li><span class="an">2019</span><div><h4>Madame Le Coq</h4><p>Création du traiteur événementiel, imaginé par Loreleï Cazalas.</p></div></li>
+          <li><span class="an">2020</span><div><h4>La Guinguette du Coq</h4><p>Les guirlandes s'allument dans le vieux bourg de Villenave-d'Ornon.</p></div></li>
+          <li><span class="an">2022</span><div><h4>Le Bistrot des Girondins</h4><p>Reprise au domaine de Rocquevielle, à Mérignac.</p></div></li>
+          <li><span class="an">2023</span><div><h4>Le Bal du Coq</h4><p>Premier bar de nuit du groupe, rue des Piliers de Tutelle.</p></div></li>
+          <li><span class="an">2025</span><div><h4>Poupoule, Cotillons, Galaswinda, Basta</h4><p>Des bouillons, une guinguette d'été de 250 places et une trattoria italo-disco.</p></div></li>
+          <li><span class="an">2026</span><div><h4>La Casetta, Basta pub et la franchise</h4><p>Un kiosque à pizzas, Basta qui passe en pub et une première marque ouverte à la franchise.</p></div></li>
+        </ol>
+        <figure class="video-portrait" style="margin:0">
+          <video controls preload="none" playsinline poster="assets/video/histoire-poster.jpg"><source src="assets/video/histoire.mp4" type="video/mp4"></video>
+          <figcaption><p>Romain Cazalas présente le groupe (vidéo tournée en 2022).</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECRUTEMENT -->
+  <section class="sec" id="recrutement" style="background:var(--creme-2)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">Recrutement</p><h2>Rejoignez la basse-cour</h2></div>
+        <p>Salle, cuisine, bar, management : on recrute toute l'année des gens qui aiment recevoir. Repas fournis, contrats convention HCR, évolution possible dans les autres maisons.</p>
+      </div>
+      <div class="reco">
+        <div><p class="label" style="margin-bottom:14px">Offres en cours</p><div class="offres" id="offres"></div></div>
+        <form class="candidature" id="candidature" novalidate>
+          <div class="champ"><label for="c-prenom">Prénom</label><input id="c-prenom" name="prenom" required autocomplete="given-name"></div>
+          <div class="champ"><label for="c-nom">Nom</label><input id="c-nom" name="nom" required autocomplete="family-name"></div>
+          <div class="champ"><label for="c-tel">Téléphone</label><input id="c-tel" name="telephone" type="tel" required autocomplete="tel"></div>
+          <div class="champ"><label for="c-mail">E-mail</label><input id="c-mail" name="email" type="email" required autocomplete="email"></div>
+          <div class="champ"><label for="c-poste">Poste</label><select id="c-poste" name="poste"></select></div>
+          <div class="champ"><label for="c-maison">Maison</label><select id="c-maison" name="maison"></select></div>
+          <div class="champ"><label for="c-contrat">Contrat</label><select id="c-contrat" name="contrat"><option>CDI</option><option>CDD / saison</option><option>Extra</option><option>Apprentissage / stage</option><option>Peu importe</option></select></div>
+          <div class="champ"><label for="c-dispo">Disponible le</label><input id="c-dispo" name="disponibilite" type="date"></div>
+          <div class="champ full"><label for="c-exp">Votre expérience</label><textarea id="c-exp" name="experience" placeholder="Pas de CV ? Décrivez votre parcours en quelques lignes."></textarea></div>
+          <label class="consent full"><input type="checkbox" id="c-ok" required> J'accepte que le Groupe Le Coq utilise ces informations pour étudier ma candidature. Elles sont conservées deux ans au maximum.</label>
+          <div class="full"><button class="btn" type="submit">Envoyer ma candidature</button></div>
+          <div class="full retour" id="c-retour" hidden></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRESSE + COMMUNICATION -->
+  <section class="sec" id="presse">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">Presse &amp; marques</p><h2>Ils parlent de nous</h2></div>
+        <p>Depuis l'ouverture du Bal du Coq fin 2023, chaque lancement du groupe a été relayé par la presse bordelaise.</p>
+      </div>
+      <div class="presse">
+        <div>
+          <a class="dp" href="assets/docs/dossier-de-presse-2026.pdf" target="_blank" rel="noopener">
+            <img src="assets/img/dp-cover.webp" alt="Couverture du dossier de presse 2026">
+            <div><p class="label">PDF · 19 pages · 2,4 Mo</p><h3>Dossier de presse 2026</h3><p style="color:var(--encre-2);margin-top:6px">Le groupe, le fondateur, les maisons, la revue de presse et les perspectives.</p></div>
+          </a>
+          <div class="com" id="com"></div>
+          <p style="margin-top:24px;color:var(--encre-2)">Contact presse, investisseurs, partenaires : <b id="mail-presse"></b>. Visuels HD, interviews et visites sur demande.</p>
+        </div>
+        <ul class="revue" id="revue"></ul>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="grille">
+      <div><img class="lg" src="assets/logos/lecoq-blanc.png" alt="Groupe Le Coq"><p style="margin-top:16px;color:rgba(255,245,230,.7);font-size:15px;max-width:30ch">Un groupe indépendant bordelais, une dizaine de maisons, une seule façon de recevoir.</p></div>
+      <div><h4>Les maisons</h4><ul id="pied-maisons"></ul></div>
+      <div><h4>Le groupe</h4><ul><li><a href="cartes.html">Les cartes du moment</a></li><li><a href="galerie.html">Galerie pop</a></li><li><a href="#evenements">Événements & séminaires</a></li><li><a href="#brigade">La brigade</a></li><li><a href="#recrutement">Recrutement</a></li><li><a href="assets/docs/dossier-de-presse-2026.pdf">Dossier de presse</a></li></ul></div>
+      <div><h4>Suivre</h4><ul id="pied-reseaux"></ul><h4 style="margin-top:24px">Équipes</h4><ul><li><a id="espace-equipes" href="#">Espace équipes (HACCP, entraide)</a></li></ul></div>
+    </div>
+    <div class="bas"><span>© <span id="annee">2026</span> Groupe Le Coq · <a href="mentions-legales.html">Mentions légales</a></span><span>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</span></div>
+  </div>
+</footer>
+
+<button class="flottant" type="button" data-resa="" aria-label="Réserver une table"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2s.2-1.1.2-1.2-.2-.2-.5-.3z"/></svg><span>Réserver</span></button>
+
+<dialog class="resa" id="resa" aria-labelledby="resa-titre">
+  <header><h3 id="resa-titre">Réserver une table</h3><button class="fermer" type="button" data-close aria-label="Fermer">×</button></header>
+  <div class="liste" id="resa-liste"></div>
+</dialog>
+
+<script src="assets/contenu.js"></script>
+<script src="assets/main.js"></script>
+<script src="assets/resa.js"></script>
+</body>
+</html>

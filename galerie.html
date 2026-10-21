@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Galerie · Groupe Le Coq</title>
+<meta name="description" content="La galerie pop du Groupe Le Coq : soirées, assiettes, terrasses et équipes de nos maisons à Bordeaux.">
+<link rel="icon" href="assets/logos/lecoq-picto.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Familjen+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wght@12..96,800&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+.gal-hero{background:#FF4FA3;color:#141210;position:relative;overflow:hidden;padding:64px 0 0}
+.gal-hero h1{font:800 clamp(64px,12vw,180px)/.85 "Bricolage Grotesque",sans-serif;letter-spacing:-.055em;text-transform:uppercase}
+.gal-hero p{max-width:56ch;margin-top:18px;font-size:18px}
+.gal-hero .hp-dots{right:-40px;top:-40px;color:#FFD400;-webkit-mask:radial-gradient(circle at 100% 0,#000 35%,transparent 70%);mask:radial-gradient(circle at 100% 0,#000 35%,transparent 70%)}
+.tape{margin:48px -20px 0;background:repeating-linear-gradient(-45deg,#FFD400 0 34px,#141210 34px 68px);padding:10px 0;transform:rotate(-2deg);border-block:4px solid #141210}
+.tape div{background:#FFD400;border-block:4px solid #141210;overflow:hidden;white-space:nowrap}
+.tape span{display:inline-block;font:800 clamp(24px,3vw,40px) "Bricolage Grotesque",sans-serif;text-transform:uppercase;padding:6px 0;animation:hp-defile 26s linear infinite}
+.tape.t2{transform:rotate(1.5deg);margin-top:-14px}
+.tape.t2 span{animation-direction:reverse}
+.gal-filtres{display:flex;gap:8px;flex-wrap:wrap;margin:48px 0 28px}
+.gal-filtres button{font:600 14px var(--f-texte);padding:10px 16px;border-radius:999px;border:2px solid #141210;background:#FFF5E6;cursor:pointer}
+.gal-filtres button[aria-pressed="true"]{background:#141210;color:#FFD400}
+.mur{columns:4 260px;column-gap:22px}
+.mur button{display:block;width:100%;margin:0 0 26px;padding:0;border:4px solid #141210;background:#141210;cursor:zoom-in;break-inside:avoid;transition:transform .25s,box-shadow .25s;box-shadow:9px 9px 0 var(--c);transform:rotate(var(--r))}
+.mur button:hover,.mur button:focus-visible{transform:rotate(0) scale(1.02);box-shadow:13px 13px 0 var(--c);outline:none}
+.mur img{display:block;width:100%;height:auto;filter:saturate(1.22) contrast(1.06)}
+.mur .tag{display:block;background:var(--c);color:#141210;font:500 11px var(--f-mono);letter-spacing:.15em;text-transform:uppercase;padding:7px 10px;text-align:left}
+dialog.lb{border:0;padding:0;background:transparent;max-width:min(1100px,calc(100% - 24px));max-height:calc(100vh - 40px)}
+dialog.lb::backdrop{background:rgba(20,18,16,.88)}
+dialog.lb img{display:block;max-width:100%;max-height:calc(100vh - 120px);border:5px solid #FFF5E6;margin:auto}
+.lb-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:12px;color:#FFF5E6;font:500 13px var(--f-mono);letter-spacing:.12em;text-transform:uppercase}
+.lb-bar button{background:#FFD400;color:#141210;border:0;border-radius:999px;width:46px;height:46px;font-size:20px;cursor:pointer}
+.wip{display:inline-block;background:#141210;color:#FFD400;font:500 12px var(--f-mono);letter-spacing:.18em;text-transform:uppercase;padding:8px 14px;border-radius:999px;margin-bottom:22px}
+</style>
+</head>
+<body>
+<header class="top scrolled" id="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="Groupe Le Coq, accueil"><img src="assets/logos/lecoq-noir.png" alt="Groupe Le Coq"></a>
+    <nav class="nav" id="nav" aria-label="Navigation principale">
+      <a href="index.html#maisons">Nos maisons</a>
+      <a href="cartes.html">Les cartes</a>
+      <a href="galerie.html" aria-current="page">Galerie</a>
+      <a href="index.html#evenements">Événements</a>
+      <a href="index.html#recrutement">Recrutement</a>
+      <a href="index.html#presse">Presse</a>
+    </nav>
+    <button class="burger" id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section class="gal-hero">
+    <div class="hp-dots" aria-hidden="true"></div>
+    <div class="wrap">
+      <p class="wip">Work in progress · la galerie se remplit</p>
+      <h1>La galerie<br>pop.</h1>
+      <p>Soirées, assiettes, terrasses et brigade : les images de nos maisons, en couleurs pétantes. On ajoute de nouvelles photos à chaque shooting.</p>
+    </div>
+    <div class="tape" aria-hidden="true"><div><span>Work in progress ✦ Work in progress ✦ Work in progress ✦ Work in progress ✦ Work in progress ✦ Work in progress ✦ Work in progress ✦ Work in progress ✦&nbsp;</span></div></div>
+    <div class="tape t2" aria-hidden="true"><div><span>Nouvelles photos bientôt ✦ Nouvelles photos bientôt ✦ Nouvelles photos bientôt ✦ Nouvelles photos bientôt ✦ Nouvelles photos bientôt ✦ Nouvelles photos bientôt ✦&nbsp;</span></div></div>
+  </section>
+
+  <section class="wrap" style="padding-bottom:96px">
+    <div class="gal-filtres" id="gf" role="group" aria-label="Filtrer par maison"></div>
+    <div class="mur" id="mur"></div>
+  </section>
+</main>
+
+<dialog class="lb" id="lb" aria-label="Photo agrandie">
+  <img id="lb-img" alt="">
+  <div class="lb-bar"><button type="button" id="lb-prev" aria-label="Photo précédente">←</button><span id="lb-cap"></span><span style="display:flex;gap:8px"><button type="button" id="lb-next" aria-label="Photo suivante">→</button><button type="button" data-close aria-label="Fermer">×</button></span></div>
+</dialog>
+
+<footer class="pied">
+  <div class="wrap">
+    <div class="bas"><span>© 2026 Groupe Le Coq · <a href="mentions-legales.html">Mentions légales</a></span><span><a href="index.html">Retour à l'accueil</a></span></div>
+  </div>
+</footer>
+
+<script src="assets/galerie.js"></script>
+<script>
+(function(){
+  const G = window.GALERIE, $ = s => document.querySelector(s);
+  const COLS = {bal:"#F5DC78", poupoule:"#8FD3A6", guinguette:"#F28C38", bdg:"#F96EA7", gala:"#FFD400", madame:"#FBE3EA", casetta:"#F6C7D2", brigade:"#2D2BE0", soirees:"#FF4FA3"};
+  const nom = id => (G.maisons.find(m => m.id === id) || {}).nom || "";
+  let filtre = "all", vues = [], cur = 0;
+  function rendre(){
+    const ids = ["all"].concat(G.maisons.map(m => m.id).filter(id => G.photos.some(p => p.m === id)));
+    $("#gf").innerHTML = ids.map(id => `<button type="button" data-f="${id}" aria-pressed="${id===filtre}">${id==="all"?"Toutes":nom(id)}</button>`).join("");
+    vues = G.photos.filter(p => filtre === "all" || p.m === filtre);
+    $("#mur").innerHTML = vues.map((p,i) => `<button type="button" data-i="${i}" style="--c:${COLS[p.m]||"#FFD400"};--r:${((i*37)%7-3)*0.6}deg" aria-label="Agrandir : ${nom(p.m)}"><img src="assets/img/${p.k}-s.webp" alt="${nom(p.m)}" loading="lazy" width="720" height="${Math.round(720*p.r)}"><span class="tag">${nom(p.m)}</span></button>`).join("");
+  }
+  const lb = $("#lb");
+  function ouvrir(i){ cur = (i + vues.length) % vues.length; const p = vues[cur]; $("#lb-img").src = `assets/img/${p.k}.webp`; $("#lb-img").alt = nom(p.m); $("#lb-cap").textContent = `${nom(p.m)} · ${cur+1}/${vues.length}`; if (!lb.open) lb.showModal ? lb.showModal() : lb.setAttribute("open",""); }
+  $("#gf").addEventListener("click", e => { const b = e.target.closest("[data-f]"); if (b) { filtre = b.dataset.f; rendre(); } });
+  $("#mur").addEventListener("click", e => { const b = e.target.closest("[data-i]"); if (b) ouvrir(+b.dataset.i); });
+  $("#lb-prev").onclick = () => ouvrir(cur - 1); $("#lb-next").onclick = () => ouvrir(cur + 1);
+  lb.addEventListener("click", e => { if (e.target === lb || e.target.closest("[data-close]")) lb.close ? lb.close() : lb.removeAttribute("open"); });
+  lb.addEventListener("keydown", e => { if (e.key === "ArrowLeft") ouvrir(cur - 1); if (e.key === "ArrowRight") ouvrir(cur + 1); });
+  const burger = $("#burger"), nav = $("#nav"); burger.onclick = () => { const o = nav.classList.toggle("open"); burger.setAttribute("aria-expanded", o); };
+  rendre();
+})();
+</script>
+</body>
+</html>
