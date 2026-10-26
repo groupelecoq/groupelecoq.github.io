@@ -30,23 +30,23 @@ window.CARTES = {
 
   bal: { titre:"Carte du bar · Automne 2026", note:"Bar des fêtes du mardi au samedi, 19 h – 2 h. Pour les plus grandes faims, le restaurant Bouillon et Cotillons est à l'étage : demandez une table au staff.", sections:[
     ["Tapas",[["Œuf mayonnaise","","4,80"],["Bol de frites maison","","5"],["Camembert rôti","","8,10"],["Samoussa de légumes","","9"],["Croquette ibérique","","9"],["Croquette de mozzarella, pesto rouge","","9"],["Foie gras et toasts","","9,20"],["Poulet croustillant","","12"],["Faux-filet tranché","","12,80"],["Mini-burger","","14"],["Planche de charcuterie et fromage","","18"],["Méga planche de tapas","","45"]]],
-    ["Coqtails",[["Mojito, Cuba Libre, Spritz, Ti Punch","","10"],["Pornstar Martini, Espresso Martini","","12"],["Tequila Paloma, Caïpirinha, Moscow Mule","","12"],["Margarita, Sex on the beach, Piña Colada","","12"],["St Germain Spritz","","12"],["Long Island","","14"],["Virgin Mojito ou Colada","","9"]]],
+    ["Coqtails",[["Mojito, Cuba Libre, Spritz, Ti Punch","","10"],["Pornstar Martini, Espresso Martini","","12"],["Tequila Paloma, Caïpirinha, Moscow Mule","","12"],["Margarita, Sex on the beach, Piña Colada","","12"],["St-Germain Spritz","","12"],["Long Island","","14"],["Virgin Mojito ou Colada","","9"]]],
     ["Bières",[["St-Omer blonde","Demi / pinte","4 / 8"],["Goudale IPA","Demi / pinte","5 / 9"],["Bière du moment","Demandez à l'équipe","5 / 9"]]],
     ["Bouteilles",[["Alcool fort","","100"],["Alcool sup","","120"],["Champagne Mumm","Coupe / bouteille","12 / 100"]]]
   ]},
 
-  cotillons: { titre:"Carte Automne 2026", note:"Le bouillon dansant, à l'étage du Bal. Du mercredi au jeudi 19 h – 22 h, vendredi et samedi 19 h – 23 h.", sections:[
+  cotillons: { titre:"Carte Automne 2026", note:"Le bouillon dansant, à l'étage du Bal. Mercredi et jeudi 19 h – 22 h, vendredi et samedi 19 h – 23 h.", sections:[
     ["Entrées",[["Pâté en croûte","","3,10"],["Œufs mayonnaise","","4,80"],["Os à moelle, fleur de sel","","5,40"],["Escargots au beurre persillé","","6,20"],["Camembert rôti au miel","","8,10"],["Tartare de saumon aux herbes","","8,40"],["Foie gras mi-cuit, toasts","","9,20"]]],
     ["Plats",[["Saucisse au jus, purée maison","","9,70"],["Cordon bleu maison, coquillettes","","10,90"],["Rigatoni tomate basilic","","11,10"],["Poulet rôti, jus et farce, frites maison","","11,90"],["Pavé de saumon, sauce vierge, purée de butternut","","13,20"],["Pièce du boucher, frites maison","","13,80"],["Confit de canard, pommes dauphines","","13,80"],["Côte de bœuf à partager (1 kg)","Frites maison, échalote confite","65"]]],
     ["Desserts",[["Île flottante","","3,90"],["Chou à la vanille","","4,80"],["Brioche perdue, caramel","","4,80"],["Cœur coulant au chocolat, crème anglaise","","4,80"],["Mousse au chocolat au saladier","","4,90"],["Petit cabécou, confiture de cerises","","6,40"]]]
   ]},
 
-  basta: { titre:"La carte du pub · dès le 1er novembre 2026", note:"Basta devient un pub : smash burgers, plats du pub et assiettes à partager. Tous nos smash burgers sont servis avec des frites.", sections:[
+  coqnsmash: { titre:"La carte du pub · dès le 1er novembre 2026", note:"Coq n' Smash, le pub du Groupe Le Coq : smash burgers, plats du pub et assiettes à partager. Tous nos smash burgers sont servis avec des frites.", sections:[
     ["Nos smash burgers",[["Classic Smash","Double steak smashé, cheddar fondant, pickles, oignons, sauce burger maison","11,90"],["Bacon Smash","Double steak smashé, cheddar fondant, bacon croustillant, oignons caramélisés, sauce barbecue fumée","12,90"],["Spicy Smash","Double steak smashé, cheddar fondant, jalapeños, oignons rouges, sauce chipotle légèrement épicée","12,90"],["Triple Coq","Triple steak smashé, triple cheddar, oignons crispy, pickles, sauce signature Coq","15,90"]]],
     ["Les plats du pub",[["Fish & chips","Filet de poisson pané à la bière, frites dorées, sauce tartare et citron","12,90"],["Chicken wings BBQ","8 ailes de poulet croustillantes, sauce BBQ ou Buffalo, frites et sauce ranch","15,90"]]],
     ["À partager",[["Nachos cheddar","Nachos croustillants, cheddar fondu, jalapeños","6,90"],["Onion rings","8 rondelles d'oignons croustillantes, sauce barbecue","6,90"],["Mozzarella sticks","6 bâtonnets de mozzarella panés, sauce tomate épicée","7,90"],["Loaded fries","Frites généreuses, cheddar fondu, bacon croustillant, oignons crispy","7,90"]]]
   ]},
 
-  casetta: { titre:"Carte de lancement", note:"Panozzo et pâtes le midi du lundi au vendredi, pizzas le soir du mardi au samedi. 100 % à emporter, commande à la borne.",
+  casetta: { titre:"Carte de lancement", note:"Panuozzo et pâtes le midi du lundi au vendredi, pizzas le soir du mardi au samedi. 100 % à emporter, commande à la borne.",
     image:"assets/img/carte-casetta.webp", pdf:"assets/docs/carte-la-casetta.pdf" }
 };

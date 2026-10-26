@@ -4,7 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Les cartes du moment · Groupe Le Coq</title>
-<meta name="description" content="Les cartes du moment des maisons du Groupe Le Coq : Bistrot des Girondins, Basta, La Casetta et les autres.">
+<meta name="description" content="Les cartes du moment des maisons du Groupe Le Coq : Guinguette du Coq, Poupoule, Bistrot des Girondins, Bal du Coq, Coq n' Smash, La Casetta et les autres.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<link rel="canonical" href="https://www.groupelecoq.fr/cartes.html">
+<meta property="og:site_name" content="Groupe Le Coq">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Les cartes du moment · Groupe Le Coq">
+<meta property="og:description" content="Bouillons, pub, guinguette, bistrot et pizzeria : toutes les cartes d'automne 2026 du Groupe Le Coq.">
+<meta property="og:url" content="https://www.groupelecoq.fr/cartes.html">
+<meta property="og:image" content="https://www.groupelecoq.fr/assets/og/coqnsmash.jpg">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/logos/lecoq-picto.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..700,0..100;1,9..144,300..700,0..100&family=Familjen+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
@@ -40,28 +51,7 @@
 
 <script src="assets/contenu.js"></script>
 <script src="assets/cartes.js"></script>
-<script>
-const CARTES = window.CARTES;
-const D = window.LECOQ, $ = s => document.querySelector(s);
-const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
-const liste = D.maisons.map(m => ({...m, cle:m.carte||m.id})).concat(D.bientot.map(b=>({...b, cle:b.carte, ville:b.lieu, type:"Bientôt · "+b.quand, fond:"#F3E9D2"})));
-$("#cartes-nav").innerHTML = liste.map(m => `<a href="#${m.cle}" data-k="${m.cle}">${esc(m.nom)}</a>`).join("");
-$("#cartes").innerHTML = liste.map(m => { const c = CARTES[m.cle];
-  const head = `<div class="entete">${m.logo?`<img class="lg" src="assets/logos/${m.logo}" alt="" style="background:${m.fond};padding:10px 14px">`:""}
-      <p class="label">${esc(m.type)} · ${esc(m.ville)}</p><h2>${esc(m.nom)}</h2>
-      ${c?`<p><b>${esc(c.titre)}.</b> ${esc(c.note)}</p>`:""}
-      <p style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">${(m.resa||m.whatsapp||m.mailResa||m.tel)?`<button class="btn sm" type="button" data-resa="${m.id}">Réserver</button>`:""}${c&&c.pdf?`<a class="btn sm clair" href="${c.pdf}" target="_blank" rel="noopener">Carte en PDF</a>`:""}</p>
-      ${m.adresse?`<p style="margin-top:14px;font-size:15px">${esc(m.adresse)}${m.tel?` · <a href="tel:${m.tel.replace(/\s/g,"")}">${esc(m.tel)}</a>`:""}</p>`:""}</div>`;
-  let body;
-  if (c && c.image) body = `<img class="carte-img" src="${c.image}" alt="Carte ${esc(m.nom)}" loading="lazy">`;
-  else if (c && c.sections) body = `<div class="menu-html">${c.sections.map(([t,items]) => `<h3>${esc(t)}</h3>` + items.map(([n,d,p]) => `<div class="plat"><b>${esc(n)}</b>${p?`<span class="p">${esc(p)} €</span>`:""}${d?`<small>${esc(d)}</small>`:""}</div>`).join("")).join("")}</div>`;
-  else { const h = m.instagram || D.reglages.instagramGroupe;
-    body = `<div class="vide"><p style="font-family:var(--f-titre);font-size:24px;color:var(--encre)">La carte change au fil du marché.</p><p style="margin-top:8px">Retrouvez l'ardoise du moment sur Instagram ou demandez-la par téléphone.</p><p style="margin-top:18px"><a class="btn sm" href="https://www.instagram.com/${esc(h)}/" target="_blank" rel="noopener">@${esc(h)}</a></p></div>`; }
-  return `<section class="carte-bloc" id="${m.cle}">${head}<div>${body}</div></section>`; }).join("");
-function marque(){ const k = location.hash.slice(1); document.querySelectorAll("#cartes-nav a").forEach(a => a.setAttribute("aria-current", a.dataset.k===k)); }
-addEventListener("hashchange", marque); marque();
-const burger = $("#burger"), nav = $("#nav"); burger.onclick = () => { const o = nav.classList.toggle("open"); burger.setAttribute("aria-expanded", o); };
-</script>
+<script src="assets/cartes-page.js"></script>
 <dialog class="resa" id="resa" aria-labelledby="resa-titre">
   <header><h3 id="resa-titre">Réserver une table</h3><button class="fermer" type="button" data-close aria-label="Fermer">×</button></header>
   <div class="liste" id="resa-liste"></div>

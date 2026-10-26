@@ -25,9 +25,10 @@ window.LECOQ = {
     espaceEquipes: "https://claude.ai/artifact/LAhdFkWzVTzcw32UwMQDd4#intranet"
   },
 
-  /* ---------- Octobre Rose (mettre actif:false le 1er novembre pour masquer la section) ---------- */
+  /* ---------- Octobre Rose (la section se masque toute seule après la date « jusquau ») ---------- */
   octobreRose: {
     actif: true,
+    jusquau: "2026-10-31",
     titre: "Le service change de couleur.",
     texte: "Tout le mois d'octobre, nos maisons s'habillent de rose. Cuisine, salle, bar : toute la brigade se mobilise pour parler dépistage du cancer du sein. En France, une femme sur huit sera concernée au cours de sa vie.",
     suite: "La suite arrive très vite : suivez-nous sur Instagram.",
@@ -36,7 +37,7 @@ window.LECOQ = {
   },
 
   /* ---------- Les maisons ----------
-     cat : bouillon | fete | jardin | pub | traiteur
+     cat : bouillon | fete | jardin | pub | traiteur  ·  logoClair : version du logo pour fond clair (bandeau)
      resa : lien de réservation en ligne (Vite Une Table…) · whatsapp : numéro au format 336XXXXXXXX
      mailResa : adresse qui reçoit les demandes par e-mail · groupeDes : à partir de combien on parle « groupe »
      carte : identifiant de la carte dans assets/cartes.js */
@@ -73,13 +74,13 @@ window.LECOQ = {
       horaires:"Du lundi au vendredi, 10 h – 15 h et 19 h – 21 h 30", photos:["pou-vert","pou-1","pou-terrasse"],
       instagram:"", resa:"", whatsapp:"33778809382", mailResa:"", groupeDes:15, carte:"poupoule" },
 
-    { id:"basta", nom:"Basta", logo:"", video:"basta-teaser", fond:"#EA8FA0", texte:"#2A1418", accent:"#F3E79B",
-      cat:["pub","fete"], type:"Pub · réouverture le 1er novembre", ville:"Villenave-d'Ornon · Courréjean",
-      accroche:"Basta change de dynamique et devient un pub.",
-      texteLong:"Smash burgers, fish & chips, chicken wings et assiettes à partager, pintes au comptoir. Réouverture le 1er novembre 2026 place de Courréjean ; la pizza continue à La Casetta.",
+    { id:"coqnsmash", nom:"Coq n' Smash", logo:"coqnsmash-blanc.png", logoClair:"coqnsmash.png", video:"coqnsmash-teaser", webm:false, fond:"#6E0815", texte:"#FFF5E6", accent:"#F2C230",
+      cat:["pub","fete"], type:"Pub · burgers · bières", ville:"Villenave-d'Ornon · Courréjean",
+      accroche:"Pub. Burger. Beers. Le nouveau pub du Groupe Le Coq.",
+      texteLong:"Smash burgers, fish & chips, chicken wings et assiettes à partager, pintes au comptoir, baby-foot et billard. Ouverture le 1er novembre 2026, place de Courréjean.",
       adresse:"17 place de Courréjean, 33140 Villenave-d'Ornon", tel:"07 63 02 59 76", mail:"",
-      horaires:"Réouverture le 1er novembre 2026", photos:[],
-      instagram:"", resa:"", whatsapp:"33763025976", mailResa:"", groupeDes:12, carte:"basta", nouveau:"Nouveau · 01/11" },
+      horaires:"Ouverture le 1er novembre 2026", photos:[],
+      instagram:"", resa:"", whatsapp:"33763025976", mailResa:"", groupeDes:12, carte:"coqnsmash", nouveau:"Ouverture · 01/11" },
 
     { id:"guinguette", video:"m-guinguette", nom:"La Guinguette du Coq", logo:"guinguette.png", fond:"#F6E3C6", texte:"#2B1A10", accent:"#F28C38",
       cat:["jardin","fete"], type:"Apéro, terrasse, pétanque", ville:"Villenave-d'Ornon · bourg",
@@ -108,16 +109,16 @@ window.LECOQ = {
 
   /* ---------- Bientôt ---------- */
   bientot: [
-    { id:"casetta", video:"casetta-teaser", nom:"La Casetta du Coq", logo:"casetta-marine.png", quand:"Automne 2026", lieu:"69 av. du Maréchal de Lattre de Tassigny, Villenave-d'Ornon",
-      texte:"Le kiosque à pizzas du groupe, développé avec Basta : panozzo et pâtes le midi en semaine, pizzeria le soir du mardi au samedi. 100 % à emporter, commande à la borne.",
-      photos:["casetta-devanture","casetta-panozzo","casetta-truffa"], carte:"casetta" }
+    { id:"casetta", video:"", nom:"La Casetta du Coq", logo:"casetta-marine.png", logoBlanc:"casetta-blanc.png", quand:"Automne 2026", lieu:"69 av. du Maréchal de Lattre de Tassigny, Villenave-d'Ornon",
+      texte:"Le kiosque à pizzas du groupe : panuozzo et pâtes le midi en semaine, pizzeria le soir du mardi au samedi. 100 % à emporter, commande à la borne.",
+      photos:["casetta-devanture","casetta-panuozzo","casetta-truffa"], carte:"casetta" }
   ],
 
   /* ---------- Nouveautés (les plus récentes en premier) ---------- */
   nouveautes: [
     { date:"2026-10-01", titre:"Octobre Rose : le service change de couleur", texte:"Tout le mois d'octobre, nos maisons s'habillent de rose pour parler dépistage. La suite arrive très vite.", photo:"", logo:"lecoq-noir.png", fond:"#FF2E93", lien:"#octobre-rose", maison:"Tout le groupe" },
-    { date:"2026-10-20", titre:"Basta rouvre en pub le 1er novembre", texte:"Smash burgers, fish & chips, wings et pintes : la place de Courréjean change de dynamique.", photo:"basta-teaser-poster", logo:"", fond:"#EA8FA0", lien:"cartes.html#basta", maison:"Basta" },
-    { date:"2026-10-15", titre:"La Casetta arrive à Villenave-d'Ornon", texte:"Panozzo le midi, pizza napolitaine le soir, à emporter. La carte de lancement est en ligne.", photo:"casetta-panozzo", lien:"cartes.html#casetta", maison:"La Casetta" },
+    { date:"2026-10-20", titre:"Coq n' Smash, le pub du groupe, ouvre le 1er novembre", texte:"Smash burgers, fish & chips, wings et pintes au comptoir, baby-foot et billard : rendez-vous place de Courréjean.", photo:"coqnsmash-teaser-poster", logo:"", fond:"#6E0815", lien:"cartes.html#coqnsmash", maison:"Coq n' Smash" },
+    { date:"2026-10-15", titre:"La Casetta arrive à Villenave-d'Ornon", texte:"Panuozzo le midi, pizza napolitaine le soir, à emporter. La carte de lancement est en ligne.", photo:"casetta-panuozzo", lien:"cartes.html#casetta", maison:"La Casetta" },
     { date:"2026-10-01", titre:"Les cartes d'automne sont là", texte:"Parmentier de paleron au porto, souris d'agneau, rigatoni aux cèpes et foie gras : toutes les nouvelles cartes en ligne.", photo:"pou-3", lien:"cartes.html", maison:"Toutes les maisons" },
     { date:"2026-06-01", titre:"Galaswinda, saison 2", texte:"Le jardin du Bistrot des Girondins redevient guinguette : tapas, cocktails maison, concerts, DJ sets et pétanque.", photo:"gala-petanque", lien:"#evenements", maison:"Bistrot des Girondins" }
   ],
@@ -186,9 +187,6 @@ window.LECOQ = {
   /* ---------- Revue de presse ---------- */
   presse: [
     { media:"Le Bonbon Bordeaux · TikTok", date:"2026", titre:"Poupoule, le bouillon qui fait le buzz", url:"https://www.tiktok.com/@le_bonbon_bordeaux/video/7586969399576366338" },
-    { media:"Le Bonbon Bordeaux", date:"Janv. 2026", titre:"Basta Cucina, la nouvelle cantine italienne" },
-    { media:"Échos Judiciaires Girondins", date:"Janv. 2026", titre:"Groupe Le Coq : Basta !, un air d'Italie à Villenave-d'Ornon", url:"https://www.echos-judiciaires.com/actualites/groupe-le-coq-un-air-ditalie-a-villenave-dornon/" },
-    { media:"L'Essentiel Bordeaux", date:"Déc. 2025", titre:"Une trattoria d'un nouveau genre près de Bordeaux", url:"https://www.lessentiel.fr/bordeaux/bonnes-adresses/2025-12-18/une-trattoria-dun-nouveau-genre-pres-de-bordeaux-12813" },
     { media:"Le Bonbon Bordeaux", date:"Juin 2025", titre:"Un bouillon festif et dansant en plein centre", url:"https://en.lebonbon.fr/bordeaux/stories/bouillon-cotillons-new-festive-dancing-restaurant" },
     { media:"Le Bonbon Bordeaux", date:"Juin 2025", titre:"Galaswinda, une guinguette festive dans un jardin", url:"https://en.lebonbon.fr/bordeaux/tops-spots/galaswinda-new-festive-guinguette-garden" },
     { media:"Le Bonbon Bordeaux", date:"Févr. 2025", titre:"Poupoule, un nouveau bouillon traditionnel français", url:"https://www.lebonbon.fr/bordeaux/actu/poupoule-nouveau-bouillon-traditionnel-francais-bordeaux/" },

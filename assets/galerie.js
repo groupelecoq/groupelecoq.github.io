@@ -38,7 +38,7 @@ window.GALERIE = {
     {"k": "bdg-tapas", "m": "bdg", "r": 1.778},
     {"k": "bdg-terrasse", "m": "bdg", "r": 1.5},
     {"k": "casetta-devanture", "m": "casetta", "r": 0.884},
-    {"k": "casetta-panozzo", "m": "casetta", "r": 1.0},
+    {"k": "casetta-panuozzo", "m": "casetta", "r": 1.0},
     {"k": "casetta-pista", "m": "casetta", "r": 1.0},
     {"k": "casetta-truffa", "m": "casetta", "r": 1.0},
     {"k": "gala-deco", "m": "gala", "r": 0.667},

@@ -12,7 +12,7 @@
     clock:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
     phone:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>'
   };
-  const CATS = [["all","Toutes"],["bouillon","Bouillons"],["fete","Fête & nuit"],["jardin","Jardins & terrasses"],["italien","Italien"],["traiteur","Traiteur"]];
+  const CATS = [["all","Toutes"],["bouillon","Bouillons"],["fete","Fête & nuit"],["pub","Pub & burgers"],["jardin","Jardins & terrasses"],["traiteur","Traiteur"]];
 
   /* En-tête */
   const top = $("#top");
@@ -63,7 +63,7 @@
 
   /* Octobre Rose */
   const OR = D.octobreRose, ors = $("#octobre-rose");
-  if (ors && OR && OR.actif) {
+  if (ors && OR && OR.actif && !(OR.jusquau && new Date() > new Date(OR.jusquau + "T23:59:59"))) {
     ors.hidden = false;
     $("#or-titre").textContent = OR.titre; $("#or-texte").textContent = OR.texte; $("#or-suite").textContent = OR.suite;
     $("#or-insta").href = ig(R.instagramGroupe); $("#or-lien").href = OR.lien;
@@ -84,7 +84,7 @@
   /* Bandeau des logos */
   const mq = $("#marquee");
   if (mq) {
-    const logos = D.maisons.filter(m => m.logo).map(m => `<a href="#maison-${m.id}" aria-label="${esc(m.nom)}"><img src="assets/logos/${m.logo}" alt="${esc(m.nom)}" loading="lazy"></a>`)
+    const logos = D.maisons.filter(m => m.logo).map(m => `<a href="#maison-${m.id}" aria-label="${esc(m.nom)}"><img src="assets/logos/${m.logoClair||m.logo}" alt="${esc(m.nom)}" loading="lazy"></a>`)
       .concat(D.bientot.map(b => `<a href="#bientot" aria-label="${esc(b.nom)}"><img src="assets/logos/${b.logo}" alt="${esc(b.nom)}" loading="lazy"></a>`)).join("");
     mq.innerHTML = logos + logos.replace(/<a /g,'<a tabindex="-1" aria-hidden="true" ');
   }
@@ -96,7 +96,7 @@
     $("#filtres").innerHTML = CATS.map(([k,l]) => `<button type="button" data-cat="${k}" aria-pressed="${k===cat}">${l}</button>`).join("");
     el.innerHTML = D.maisons.filter(m => cat==="all" || m.cat.includes(cat)).map(m => {
       const media = m.video
-        ? `<video data-auto muted loop playsinline preload="none" poster="assets/video/${m.video}-poster.jpg" aria-label="Teaser ${esc(m.nom)}"><source src="assets/video/${m.video}.webm" type="video/webm"><source src="assets/video/${m.video}.mp4" type="video/mp4"></video>`
+        ? `<video data-auto muted loop playsinline preload="none" poster="assets/video/${m.video}-poster.jpg" aria-label="Teaser ${esc(m.nom)}">${m.webm===false?"":`<source src="assets/video/${m.video}.webm" type="video/webm">`}<source src="assets/video/${m.video}.mp4" type="video/mp4"></video>`
         : m.photos.length
         ? `<img src="${img(m.photos[0],1)}" srcset="${img(m.photos[0],1)} 720w, ${img(m.photos[0])} 1600w" sizes="(max-width:760px) 100vw, 420px" alt="${esc(m.nom)}" loading="lazy">${m.photos[1]?`<img src="${img(m.photos[1],1)}" alt="" loading="lazy">`:""}
            ${m.logo?`<span class="badge-logo" style="background:${m.fond}"><img src="assets/logos/${m.logo}" alt=""></span>`:""}`
@@ -129,7 +129,7 @@
     ft.innerHTML = `<div class="feature"><div>
         <img class="logo-c" src="assets/logos/${b.logo}" alt="${esc(b.nom)}">
         <p class="label">Prochainement · ${esc(b.lieu)}</p>
-        <h3 style="margin-top:10px">Panozzo le midi, pizza le soir.</h3>
+        <h3 style="margin-top:10px">Panuozzo le midi, pizza le soir.</h3>
         <p>${esc(b.texte)}</p>
         <form class="inscr" id="inscr" novalidate>
           <p class="inscr-t"><b>La carte en avant-première + des remises d'ouverture</b> : inscrivez-vous, on vous prévient avant tout le monde.</p>
@@ -142,7 +142,7 @@
           <div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn blanc" type="submit">Je m'inscris</button>${R.whatsappGroupe?`<button class="btn contour-blanc" type="button" id="i-wa">Par WhatsApp</button>`:""}<a class="btn contour-blanc" href="cartes.html#${b.carte}">La carte de lancement</a></div>
           <p class="inscr-r" id="i-r" hidden></p>
         </form>
-      </div><div class="gal">${b.video?`<video data-auto muted loop playsinline preload="none" poster="assets/video/${b.video}-poster.jpg" aria-label="Teaser La Casetta : le rideau s'ouvre"><source src="assets/video/${b.video}.webm" type="video/webm"><source src="assets/video/${b.video}.mp4" type="video/mp4"></video>`:""}${b.photos.slice(b.video?1:0).map(p=>`<img src="${img(p)}" alt="" loading="lazy">`).join("")}</div></div>`;
+      </div><div class="gal">${b.video?`<video data-auto muted loop playsinline preload="none" poster="assets/video/${b.video}-poster.jpg" aria-label="Teaser La Casetta : le rideau s'ouvre"><source src="assets/video/${b.video}.webm" type="video/webm"><source src="assets/video/${b.video}.mp4" type="video/mp4"></video>`:""}${b.photos.slice(b.video?1:0).map(p=>`<img src="${img(p)}" alt="${esc(b.nom)}" loading="lazy">`).join("")}</div></div>`;
     const f = $("#inscr"), out = $("#i-r");
     const msg = () => `Bonjour, je souhaite recevoir la carte de La Casetta du Coq en avant-première et les remises d'ouverture.\n${$("#i-prenom").value.trim()} · ${$("#i-mail").value.trim()}${$("#i-tel").value.trim()?" · "+$("#i-tel").value.trim():""}`;
     const ok = () => { if (!$("#i-mail").value.trim() || !$("#i-mail").checkValidity()) { out.hidden=false; out.textContent="Indiquez une adresse e-mail valide."; $("#i-mail").focus(); return false; }
@@ -173,7 +173,7 @@
       insta.innerHTML = `<behold-widget feed-id="${esc(R.beholdFeedId)}"></behold-widget>`;
       const s = document.createElement("script"); s.type = "module"; s.src = "https://w.behold.so/widget.js"; document.head.appendChild(s);
     } else {
-      const pics = ["bal-soiree3","basta-emilie","gdc-tablee","bal-bar","bdg-pergola","casetta-truffa","gdc-bbq","bal-cadres","basta-table"];
+      const pics = ["bal-soiree3","casetta-pista","gdc-tablee","bal-bar","bdg-pergola","casetta-truffa","gdc-bbq","bal-cadres","pou-terrasse"];
       insta.innerHTML = `<div class="insta-grid">${pics.map(p=>`<a href="${ig(R.instagramGroupe)}" target="_blank" rel="noopener" aria-label="Voir sur Instagram"><img src="${img(p,1)}" alt="" loading="lazy"></a>`).join("")}</div>`;
     }
   }
